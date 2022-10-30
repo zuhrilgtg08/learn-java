@@ -1,0 +1,6 @@
+b7abf479df48481e2d1d2fb89d82523c = client_id
+171abbd93de6b83d1ec30d3d9e283a11163c39121e8490874f76dab5986038ee = client_secret / apikey
+
+//sportify api
+e2f9418f34384225ad5239d89c8bd0ae = client_id
+ac77593e8066469689fecd23903eb79d = client_secret

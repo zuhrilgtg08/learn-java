@@ -1,0 +1,212 @@
+1). Buatlah sebua
+
+
+// scanner
+import java.util.Scanner;
+public class Menghitung_rata_rata_nilai {
+    public static void main(String args[])
+    {
+        Scanner masuk = new Scanner(System.in);
+        int i, n;
+        float jum, x, rata;
+        System.out.print ("Banyaknya Data: ");
+        n = masuk.nextInt();
+        jum=0;
+        i=1;
+        while (i<=n){
+                System.out.print ("Data ke-"+i+": ");
+                x=masuk.nextFloat ();
+                jum += x;
+                i++;
+        }
+        rata = jum / n;
+        System.out.println ("Rata-rata: "+rata);
+        System.out.println ("Jumlah: "+jum);
+   }
+}
+
+//input
+
+//Nama file: InputNamaMahasisa.java
+
+import java.util.*;
+import java.io.*;
+
+public class InputNamaMahasiswa{
+ public static void main(String[] args){
+  String nama; //untuk nama mahasiswa
+  double rata; //untuk nilai rata-rata
+
+  int[] nilai = new int[100]; //untuk nilai yang diinputkan
+  Scanner input = new Scanner(System.in) //membuat form input
+
+  /* Mengambil data nama mahasiswa dan jumlah mata kuliahnya */
+  System.out.print("Nama anda: ");
+  nama = input.nextLine();
+
+  System.out.print("Jumlah mata kuliah: ");
+  double jml = input.nextInt();
+
+  /* Mulai berhitung~ */
+  int sum = 0; //deklarasi int dengan nama sum, digunakan untuk menjumlahkan nilai-nilai yg diinputkan
+  for (int i=1; i<= jml ;i++ ) {
+   try{
+    System.out.print("Nilai MK"+i+": "); //print form input nilai sebanyak mata kuliah
+    nilai[i] = input.nextInt(); //form nilai. Bertipe array supaya bisa dihitung
+    sum += nilai[i]; //menjumlahkan nilai-nilai mata kuliah
+   } catch (Exception e){
+    e.printStackTrace();
+    break;
+   }
+  }
+
+  rata = sum/jml; //menghitung rata-rata: jumlah nilai dibagi total mata kuliah
+  int jmls = (int)(jml); //mengkonvert jml (double) ke int
+
+  /* Tampilkan hasil */
+  System.out.println("\n"+nama+", Total nilai "+jmls+" mata kuliahmu= "+sum); //tampilkan output
+  System.out.println("dengan rata-rata= "+rata); //tampilkan output lagi
+ }
+}
+
+//rata rata
+public static void main(String[] args) {
+   NumberFormat nf = NumberFormat.getInstance();
+   nf.setMaximumFractionDigits(2);
+
+   int nilai[][] = new int[4][3];
+   nilai[0][0] = 81;
+   nilai[0][1] = 90;
+   nilai[0][2] = 62;
+   nilai[1][0] = 50;
+   nilai[1][1] = 83;
+   nilai[1][2] = 87;
+   nilai[2][0] = 89;
+   nilai[2][1] = 55;
+   nilai[2][2] = 65;
+   nilai[3][0] = 77;
+   nilai[3][1] = 70;
+   nilai[3][2] = 92;
+
+   String NRP[] = {"1", "2", "3", "4"};
+   double ratarataMK[] = new double[nilai.length];
+
+   for (int i=0; i<nilai.length; i++) {
+      for (int j=0; j<nilai[0].length; j++) {
+         ratarataMK[i] += nilai[i][j];
+      }
+      ratarataMK[i]= ratarataMK[i] / nilai[0].length;
+   }
+   System.out.println("NRP Rata-rata");
+   System.out.println("————————-");
+
+   for (int i=0; i<nilai.length; i++) {
+      System.out.print(NRP[i] + "\t");
+      for (int j=0; j<nilai[0].length; j++) {
+         }
+         
+         System.out.println(nf.format(ratarataMK[i]) + "\n");
+      }
+   System.out.println("————————–");
+   }
+}
+
+
+// siswa
+public class array3 {
+    public static void main(String[] args) {
+        String nama[] = {"Ahmad", "Adang", "Dani", "Edi"};
+        String makul [] = {"RPL", "BD", "PBO"};
+        int nrp[] = {1, 2, 3, 4};
+        int rpl[] = {81, 50, 89, 77};
+        int bd[] = {90, 83, 55, 70};
+        int pbo[] = {62, 87, 65, 92};
+        int rata2;
+        
+        System.out.println("=============== REKAPITULASI NILA MAHASISWA ===============");
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("NRPt" + "Nama Mhst" + "RPLt" + "BDt" + "PBOt" + "Rata-Rata");
+        System.out.println("-----------------------------------------------------------");
+        for (int i = 0; i < nama.length; i++){
+            rata2 = ((rpl[i] + bd[i] + pbo[i]) / makul.length);
+            
+        System.out.print(nrp[i]+ "t");
+        System.out.print(nama[i]+ "tt");
+        System.out.print(rpl[i]+ "t");
+        System.out.print(bd[i]+ "t");
+        System.out.print(pbo[i]+ "t");
+        System.out.println(rata2);
+        System.out.println("-----------------------------------------------------------");
+        }
+        System.out.println("");
+        
+    }
+}
+
+// nomor 1
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class RataRataMapel {
+    public static void main(String[] args) {
+        HashMap<String, Integer> nilai = new HashMap<String, Integer>();
+        nilai.put("A", 90);
+        nilai.put("B", 80);
+        nilai.put("C", 70);
+        nilai.put("D", 60);
+        nilai.put("E", 50);
+
+        HashMap<String, HashMap<String, Integer>> mapel = new HashMap<String, HashMap<String, Integer>>();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ada berapa mata pelajaran yang ingin dimasukkan? ");
+        int jumlahMapel = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i = 0; i < jumlahMapel; i++) {
+            String kodeMapel = "CS142" + (i + 1);
+            System.out.println("Masukkan nama mata pelajaran ke-" + (i + 1) + ": ");
+            String namaMapel = scanner.next();
+            System.out.println("Masukkan nilai mata pelajaran ke-" + (i + 1) + ": ");
+            int nilaiMapel = scanner.nextInt();
+
+            HashMap<String, Integer> infoMapel = new HashMap<String, Integer>();
+            infoMapel.put(namaMapel, nilaiMapel);
+
+            mapel.put(kodeMapel, infoMapel);
+        }
+
+        int totalNilai = 0;
+        for (String kodeMapel : mapel.keySet()) {
+            HashMap<String, Integer> infoMapel = mapel.get(kodeMapel);
+            for (String namaMapel : infoMapel.keySet()) {
+                int nilaiMapel = infoMapel.get(namaMapel);
+                totalNilai += nilaiMapel;
+            }
+        }
+        int rataRata = totalNilai / mapel.size();
+
+        // print as table
+        System.out.println("+-----------+----------------------+----------+");
+        System.out.println("| Kode      | Mata Pelajaran       | Predikat |");
+        System.out.println("+-----------+----------------------+----------+");
+        for (String kodeMapel : mapel.keySet()) {
+            String predicate = "";
+            HashMap<String, Integer> infoMapel = mapel.get(kodeMapel);
+            String namaMapel = infoMapel.keySet().toArray()[0].toString();
+            int nilaiMapel = infoMapel.get(infoMapel.keySet().toArray()[0].toString());
+            for (String predikat : nilai.keySet()) {
+                if (nilaiMapel >= nilai.get(predikat)) {
+                    predicate = predikat;
+                    break;
+                }
+            }
+            System.out.printf("| %-9s | %-20s | %-8s |%n", kodeMapel, namaMapel, predicate);
+        }
+        System.out.println("+----------------------------------+----------+");
+        System.out.printf("| %-32s | %-8d |%n", "Rata-rata", rataRata);
+        System.out.println("+----------------------------------+----------+");
+
+        scanner.close();
+    }
+}

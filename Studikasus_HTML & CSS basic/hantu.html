@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <title>👻SETAN👻</title>
+    <style>
+    	body{
+    	background-color:#464F6E;
+    	margin:0px;
+    	padding:0px;
+    	font-size:20px;
+    	}
+    	body:hover{
+    	background-color:black;
+    	margin:0px;
+    	padding:0px;
+    	font-size:20px;
+    	color:red;
+    	}
+    	.ghost
+    	{ width:120px;
+    	height:150px ;
+    	background-color:white;
+    	border-top-left-radius:100%;
+    	border-top-right-radius:100%;
+    	position:absolute;
+    	top:80px;
+    	left:120px;
+    	animation: mymove 2s infinite;
+    	
+    	
+    	
+    	}
+    	.circle{
+    	width:30px;
+    	height:30px ;
+    	background-color:white;
+    	border-radius:50%;
+    	display:inline-block;
+    	margin:0px;
+    	position:absolute;
+    	}
+    	.circle1{
+    	top:135px;
+    	}
+    	.circle2{
+    	top:135px;
+    	left:30px;
+    	}
+    	.circle3{
+    	top: 135px;
+    	left:60px;
+    	}
+    	.circle4{
+    	top: 135px;
+    	left:90px;
+    	}
+    	.eye{
+    	width:20px;
+    	height:20px;
+    	background-color: #212639;
+    	border-radius:50%;
+    	position:absolute;
+    	}
+    	.eye1{
+    	top:50px;
+    	left:30px;
+    	
+    	}
+    	.eye2{
+    	top:50px;
+    	left:70px;
+    	}
+    	.mouth{
+    	width:40px;
+    	height:30px;
+    	background-color:#212639;
+    	border-bottom-left-radius:50%;
+    	border-bottom-right-radius:50%;
+    	position:absolute;
+    	top:90px;
+    	left:40px;
+    	
+    	}
+    	.teeth{
+    	width:7px;
+    	height:5px;
+    	background-color:white;
+    	position:absolute;
+    	left:10px
+    	}
+    	.hand1{
+    	width:30px ;
+    	height:30px;
+    	background-color:white;
+    	border-radius:50%;
+    	position:absolute;
+    	top:80px;
+    	left:-15px;
+    	}
+    	.hand2{
+    	width:30px ;
+    	height:30px;
+    	background-color:white;
+    	border-radius:50%;
+    	position:absolute;
+    	top:80px;
+    	right:-15px;
+    	}
+    	.shadow{
+    	width:110px;
+    	height:30px;
+    	background-color: #212639;
+    	border-radius:100%;
+    	position:absolute ;
+    	top:300px;
+    	left:120px;
+    	animation:mymove2 2s infinite;
+    	}
+    	@keyframes mymove {
+    	0% {top:80px}
+    	50%{top:120px}
+    	100%{top:80px}
+    	
+    	}
+    	@keyframes mymove2{
+    	0% {width:110px}
+    	50%{width:80px;left:140px}
+    	100%{width:110px}
+    	}
+    	h1{
+    	margin-top:310px;
+    	font-size:55px;
+    	text-align:center;
+    	font-family: 'Potta One', cursive;
+    	margin-left:10px;
+    	margin-right:10px;
+    	}
+    	span{
+    	color:red;
+    	
+    	}
+    	A{
+    	font-size:30px;
+    	text-align:center;
+    	text-decoration:none;
+    	margin-left:80px;
+    	Border:2px solid black;
+    	text-transform:uppercase;
+    	color:white;
+    	background-color:black;
+    	font-family: 'Yusei Magic', sans-serif; 
+    	
+    	}
+    	li{ 
+    	
+    	list-style: none; 
+    	font-size: 1em; 
+    	letter-spacing: 2px; 
+    	transition: 1s; 
+    	display:inline-block;
+    	
+    	
+    	} 
+    	
+    	/*creating the ghost effect*/
+    	
+    	li:hover{ 
+    	
+    	filter: blur(70px); 
+    	
+    	opacity: 0; 
+    	
+    	} 
+    	
+    	li:nth-child(1){ 
+    	
+    	animation-delay: 0.1s; 
+    	
+    	} 
+    	
+    	li:nth-child(2){ 
+    	
+    	animation-delay: 0.2s; 
+    	
+    	} 
+    	
+    	li:nth-child(3){ 
+    	
+    	animation-delay: 0.3s; 
+    	
+    	} 
+    	
+    	li:nth-child(4){ 
+    	
+    	animation-delay: 0.4s; 
+    	
+    	} 
+    	
+    	li:nth-child(5){ 
+    	
+    	animation-delay: 0.5s; 
+    	
+    	}
+</style>
+
+</head>
+
+<body>
+<p>siapkan mental</p>
+<div class="ghost">
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="eye eye1"></div>
+  <div class="eye eye2"></div>
+  <div class="mouth">
+    <div class="teeth"></div>
+  </div>
+  <div class="hand1"></div>
+  <div class="hand2"></div>
+</div>
+<div class="shadow"></div>
+<h1>SETAN<br><li>l</li>
+<li>a</li>
+<li>k</li>
+<li>n</li>
+<li>a</li>
+<li>t</li>
+    <script>
+    	alert("Ojk Diteken Setan ne Lho yo. Aku wes ngandani lho yo");
+    	
+    	
+    	window.addEventListener("mouseover",play);
+    	window.addEventListener("click",play);
+    	function play(){ document.getElementById("audio").play();
+    	}
+    </script>
+</h1>
+<audio controls style="display:none;" loop id="audio">
+     <source id="audio-source"
+     src="https://mobcup.net/d/dfg58vf8/mp3"> </audio>
+</body>
+
+</html>

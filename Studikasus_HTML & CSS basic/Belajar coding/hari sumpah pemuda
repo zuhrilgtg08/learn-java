@@ -1,0 +1,12 @@
+let unixTimestamp = 1603856468;
+var sumpahpemuda = new Date(unixTimestamp *1000),
+tanggal = sumpahpemuda.getDate(),
+bulan = (sumpahpemuda.getMonth() + 1),
+tahun = sumpahpemuda.getFullyear();
+
+if (tanggal==28&&
+    bulan==10&&
+    tahun==2020) {
+      console.log("selamat hari sumpah pemuda")
+      console.log("satu bangsa,satu bahasa,satu tanah air,pemuda indonesia")
+}
