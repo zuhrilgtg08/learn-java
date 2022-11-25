@@ -24,6 +24,6 @@ public class EventMain extends JFrame implements ActionListener{
     }
     @Override
     public void actionPerformed(ActionEvent args) {
-        this.setTitle("Title has been cahnged");
+        this.setTitle("Title has been changed");
     }
 }
