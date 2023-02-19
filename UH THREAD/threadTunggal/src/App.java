@@ -14,7 +14,6 @@ class ThreadUtama extends Thread {
     }
 }
 
-
 public class App {
     public static void main(String[] args) throws Exception {
         Thread mainThread = new Thread(new ThreadUtama());
